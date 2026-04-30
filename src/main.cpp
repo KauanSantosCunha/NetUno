@@ -241,9 +241,9 @@ void loop() {
       ciclos++;
       Serial.print("Ciclo detectado #");
       Serial.println(ciclos);
-      digitalWrite(pinoRele, HIGH);
-      delay(1000);
       digitalWrite(pinoRele, LOW);
+      delay(1000);
+      digitalWrite(pinoRele, HIGH);
       send_trapper_with_retry("ciclos_completos", ciclos, 1);
     }
     ultimoEstadoSinal = estadoSinal;
